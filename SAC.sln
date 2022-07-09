@@ -6,12 +6,58 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{83FB4649-C6AE-48FC-B234-D302D7ED1F01}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
+		migration-notes.txt = migration-notes.txt
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{25B8610B-F83D-40F2-A0BE-2DC6C4A1F389}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CDCD793D-B74B-425F-B36D-C3EDBAB7BD2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{907350E4-C549-4AA3-A445-25ABF7A204C1}"
+	ProjectSection(SolutionItems) = preProject
+		resetDatabaseMigrationState.ps1 = resetDatabaseMigrationState.ps1
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAC.Domain", "src\SAC.Domain\SAC.Domain.csproj", "{54F89837-AE25-4BA2-857E-9D6BE8B217D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAC.Application", "src\SAC.Application\SAC.Application.csproj", "{304B8C08-513C-47A3-B311-1AEC059A9ACA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAC.Infrastructure", "src\SAC.Infrastructure\SAC.Infrastructure.csproj", "{DC337FC0-598F-4DF6-B63A-145A8FA17821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAC.Web", "src\SAC.Web\SAC.Web.csproj", "{0D4E4770-3CB8-43C2-B554-86E26BC8D7AA}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54F89837-AE25-4BA2-857E-9D6BE8B217D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F89837-AE25-4BA2-857E-9D6BE8B217D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F89837-AE25-4BA2-857E-9D6BE8B217D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F89837-AE25-4BA2-857E-9D6BE8B217D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{304B8C08-513C-47A3-B311-1AEC059A9ACA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{304B8C08-513C-47A3-B311-1AEC059A9ACA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{304B8C08-513C-47A3-B311-1AEC059A9ACA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{304B8C08-513C-47A3-B311-1AEC059A9ACA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC337FC0-598F-4DF6-B63A-145A8FA17821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC337FC0-598F-4DF6-B63A-145A8FA17821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC337FC0-598F-4DF6-B63A-145A8FA17821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC337FC0-598F-4DF6-B63A-145A8FA17821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D4E4770-3CB8-43C2-B554-86E26BC8D7AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D4E4770-3CB8-43C2-B554-86E26BC8D7AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D4E4770-3CB8-43C2-B554-86E26BC8D7AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D4E4770-3CB8-43C2-B554-86E26BC8D7AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54F89837-AE25-4BA2-857E-9D6BE8B217D5} = {25B8610B-F83D-40F2-A0BE-2DC6C4A1F389}
+		{304B8C08-513C-47A3-B311-1AEC059A9ACA} = {25B8610B-F83D-40F2-A0BE-2DC6C4A1F389}
+		{DC337FC0-598F-4DF6-B63A-145A8FA17821} = {25B8610B-F83D-40F2-A0BE-2DC6C4A1F389}
+		{0D4E4770-3CB8-43C2-B554-86E26BC8D7AA} = {25B8610B-F83D-40F2-A0BE-2DC6C4A1F389}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83A71585-DF77-4760-B980-20C0203F794E}

@@ -1,0 +1,8 @@
+--- Add a migration
+dotnet ef migrations add "InitialMigration" --project src\SAC.Infrastructure\ --startup-project src\SAC.Web\ --output-dir Persistence\Migrations\
+
+-- Apply the migration
+dotnet ef database update --project .\src\SAC.Infrastructure\ --startup-project .\src\SAC.Web\
+
+-- List migrations
+dotnet ef migrations list --project .\src\SAC.Infrastructure\
